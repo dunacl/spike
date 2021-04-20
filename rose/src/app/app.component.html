@@ -1,0 +1,17 @@
+<ng-sidebar-container>
+  <ng-sidebar [opened]="opened ">
+    <button class="btn btn-info" (click)="toogleSidebar()">Close</button>
+    <ul class="menubar">
+      <li><a routerLink="/" (click)="toogleSidebar()">Home</a></li>
+      <li><a routerLink="/history" (click)="toogleSidebar()">History</a></li>
+    </ul>
+  </ng-sidebar>
+  <div ng-sidebar-content>
+    <!-- Header -->
+    <button class="btn btn-info" (click)="toogleSidebar()">
+      Menu
+    </button>
+    <!-- Body -->
+    <router-outlet></router-outlet>
+  </div>
+</ng-sidebar-container>

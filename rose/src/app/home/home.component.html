@@ -1,0 +1,88 @@
+<!-- main app container -->
+<div class="card m-3">
+  <h3 class="card-header">Distance calculator</h3>
+  <div class="card-body">
+    <form [formGroup]="calculateForm" (ngSubmit)="onSubmit()">
+      <h6>
+        From
+        <small class="text-muted">Address to start</small>
+      </h6>
+      <div class="form-row">
+        <div class="form-group col-5">
+          <label>Stree, Avenue, Way, etc</label>
+          <input type="text" formControlName="fromStreet" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.fromStreet.errors }" />
+          <div *ngIf="submitted && f.fromStreet.errors" class="invalid-feedback">
+            <div *ngIf="f.fromStreet.errors.required">Street is required</div>
+          </div>
+        </div>
+        <div class="form-group col-2">
+          <label>Number</label>
+          <input type="text" formControlName="fromNumber" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.fromNumber.errors }" />
+          <div *ngIf="submitted && f.fromNumber.errors" class="invalid-feedback">
+            <div *ngIf="f.fromNumber.errors.required">Number is required</div>
+          </div>
+        </div>
+        <div class="form-group col-3">
+          <label>City</label>
+          <input type="text" formControlName="fromCity" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.fromCity.errors }" />
+          <div *ngIf="submitted && f.fromCity.errors" class="invalid-feedback">
+            <div *ngIf="f.fromCity.errors.required">City is required</div>
+          </div>
+        </div>
+        <div class="form-group col-2">
+          <label>Country</label>
+          <input type="text" formControlName="fromCountry" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.fromCountry.errors }" />
+          <div *ngIf="submitted && f.fromCountry.errors" class="invalid-feedback">
+            <div *ngIf="f.fromCountry.errors.required">Country is required</div>
+          </div>
+        </div>
+      </div>
+      <h6>
+        To
+        <small class="text-muted">Address to end</small>
+      </h6>
+      <div class="form-row">
+        <div class="form-group col-5">
+          <label>Stree, Avenue, Way, etc</label>
+          <input type="text" formControlName="toStreet" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.toStreet.errors }" />
+          <div *ngIf="submitted && f.toStreet.errors" class="invalid-feedback">
+            <div *ngIf="f.toStreet.errors.required">Street is required</div>
+          </div>
+        </div>
+        <div class="form-group col-2">
+          <label>Number</label>
+          <input type="text" formControlName="toNumber" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.toNumber.errors }" />
+          <div *ngIf="submitted && f.toNumber.errors" class="invalid-feedback">
+            <div *ngIf="f.toNumber.errors.required">Number is required</div>
+          </div>
+        </div>
+        <div class="form-group col-3">
+          <label>City</label>
+          <input type="text" formControlName="toCity" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.toCity.errors }" />
+          <div *ngIf="submitted && f.toCity.errors" class="invalid-feedback">
+            <div *ngIf="f.toCity.errors.required">City is required</div>
+          </div>
+        </div>
+        <div class="form-group col-2">
+          <label>Country</label>
+          <input type="text" formControlName="toCountry" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.toCountry.errors }" />
+          <div *ngIf="submitted && f.toCountry.errors" class="invalid-feedback">
+            <div *ngIf="f.toCountry.errors.required">Country is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary mr-1">Calculate</button>
+        <button class="btn btn-secondary" type="reset" (click)="onReset()">Clear</button>
+      </div>
+    </form>
+  </div>
+</div>

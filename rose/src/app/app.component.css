@@ -1,0 +1,37 @@
+ng-sidebar-container{
+  height: 100vh;
+}
+
+::ng-deep .ng-sidebar {
+  background-color: #efeef5;
+  padding: 2em 3em;
+  width: 300px;
+  box-shadow: 0 0 0.9em rgba(45, 37, 37, 0.5);
+}
+
+.menubar {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menubar li {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.menubar li a:link, a:visited{
+  background-color: #f44336;
+  color: white;
+  width: 80%;
+  padding: 14px 25px;
+  text-align: left;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.menubar li a:link, a:visited{
+  background-color: red;
+}

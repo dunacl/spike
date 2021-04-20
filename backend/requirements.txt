@@ -1,0 +1,12 @@
+gunicorn
+Flask==1.1.1
+Flask-AutoIndex==0.6.6
+Flask-BasicAuth==0.2.0
+Flask-Cors==3.0.8
+Flask-HTTPAuth==4.2.0
+requests
+jsonschema
+math
+sqlite3
+cryptography
+python-dotenv
